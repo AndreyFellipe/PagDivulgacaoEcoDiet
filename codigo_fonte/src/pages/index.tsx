@@ -2,9 +2,20 @@ import Image from "next/image";
 import logoSvg from "img/abacate.svg";
 import alimentos from "img/alimentos.svg";
 import wave from "img/wave.svg";
+import checkIcon from "img/check.svg";
 import dcomp from "img/dcomp_ufs.png";
 
+
 export default function Home() {
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <div>
       <title>EcoDiet</title>
@@ -33,6 +44,7 @@ export default function Home() {
               </span>
             </p>
           </div>
+          <span>Equipe</span>
         </div>
       </nav>
 
@@ -98,16 +110,53 @@ export default function Home() {
 
       {/* Começo da Página 2 */}
       <div style={{ marginTop: "100vh" }}>
-        <div
-          style={{
-            position: "relative",
-            backgroundColor: "white",
-            height: "100vh",
-          }}
-        >
-          {/* Conteúdo da segunda página */}
-        </div>
-      </div>
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100vh",
+      backgroundColor: "white",
+    }}
+  >
+    {/* Imagem */}
+    <div style={{ flex: 1, padding: "0 20px" }}>
+  <video autoPlay loop muted>
+    <source src="img/atendimento.mp4" type="video/mp4" />
+    Seu navegador não suporta a tag de vídeo.
+  </video>
+</div>
+    
+    {/* Texto */}
+    <div className="text-black" style={{ flex: 1, padding: "0 20px" }}>
+      <h2>O que o EcoDiet tem a oferecer</h2>
+      <p>EcoDiet é um software de nutrição para melhorar seus atendimentos e pesquisas da área. O que o EcoDiet oferece:</p>
+      <ul>
+  <li style={{ display: "flex", alignItems: "center" }}>
+    <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+    <span>Gerenciamento de atendimentos e acompanhamentos</span>
+  </li>
+  <li style={{ display: "flex", alignItems: "center" }}>
+    <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+    <span>Histórico de evolução do paciente</span>
+  </li>
+  <li style={{ display: "flex", alignItems: "center" }}>
+    <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+    <span>Chat integrado</span>
+  </li>
+  <li style={{ display: "flex", alignItems: "center" }}>
+    <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+    <span>Cadastro de alimentos e alimentos por tabelas</span>
+  </li>
+  <li style={{ display: "flex", alignItems: "center" }}>
+    <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+    <span>Registro de recordatório, prescrições, bioimpedância e exames</span>
+  </li>
+</ul>
+
+    </div>
+  </div>
+</div>
       {/* Fim da Página 2 */}
 
       {/* Começo da Página 3 */}
@@ -139,18 +188,32 @@ export default function Home() {
       {/* Fim da Página 4 */}
 
       {/* Começo da Página 5 */}
-      <div style={{ marginTop: "" }}>
-        <div
-          style={{
-            position: "relative",
-            backgroundColor: "#BEEBC2",
-            height: "100vh",
-          }}
-        >
-          {/* Conteúdo da quinta página */}
-        </div>
-      </div>
-      {/* Fim da Página 5 */}
+<div style={{ marginTop: "" }}>
+  <div
+    style={{
+      position: "relative",
+      backgroundColor: "#BEEBC2",
+      height: "100vh",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      flexDirection: "column",
+    }}
+  >
+    {/* Conteúdo da quinta página */}
+    <p style={{ fontFamily: "Poppins Semibold", fontSize: "50px", marginBottom: "20px" }}>Confira o nosso Pitch</p>
+    <iframe
+      width="70%"
+      height="70%"
+      src="https://www.youtube.com/embed/FC6kzHebnJs?vq=hd1080"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+{/* Fim da Página 5 */}
 
       {/* Footer */}
       <footer className="flex justify-center items-center" style={{ backgroundColor: "#5d7d60", color: "white", textAlign: "center", height: "100px" }}>
