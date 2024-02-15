@@ -11,6 +11,9 @@ dependencies:
   next-images:
     specifier: ^1.8.5
     version: 1.8.5(webpack@5.90.1)
+  poppins:
+    specifier: ^0.1.1
+    version: 0.1.1
   react:
     specifier: ^18
     version: 18.0.0
@@ -2343,6 +2346,12 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
+  /poppins@0.1.1:
+    resolution: {integrity: sha512-Vs2G0n9bU81uzLdKWVhklVGWZnnq5bKxMvCGRargLpPiw0QKNr/eCdwzCY2VuoQyDqwf612PN3BgVuSFgP3ZsQ==}
+    dependencies:
+      shallow-copy: 0.0.1
+    dev: false
+
   /postcss-import@14.1.0(postcss@8.0.0):
     resolution: {integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==}
     engines: {node: '>=10.0.0'}
@@ -2648,6 +2657,10 @@ packages:
       functions-have-names: 1.2.3
       has-property-descriptors: 1.0.1
     dev: true
+
+  /shallow-copy@0.0.1:
+    resolution: {integrity: sha512-b6i4ZpVuUxB9h5gfCxPiusKYkqTMOjEbBs4wMaFbkfia4yFv92UKZ6Df8WXcKbn08JNL/abvg3FnMAOfakDvUw==}
+    dev: false
 
   /shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}

@@ -98,7 +98,7 @@ export default function Home() {
             <div>
               <span
                 className="font-open-sans text-70 font-light text-black"
-                style={{ lineHeight: "50px" }}
+                style={{ lineHeight: "80px" }}
               >
                 EcoDiet: Nutrição Inteligente para um Futuro Saudável!
               </span>
@@ -128,31 +128,35 @@ export default function Home() {
 </div>
     
     {/* Texto */}
-    <div className="text-black" style={{ flex: 1, padding: "0 20px" }}>
-      <h2>O que o EcoDiet tem a oferecer</h2>
-      <p>EcoDiet é um software de nutrição para melhorar seus atendimentos e pesquisas da área. O que o EcoDiet oferece:</p>
+    <div className="text-black poppins-semibold" style={{ flex: 1, padding: "0 20px" }}>
+      <h2 className="text-[60px]">O que o EcoDiet tem a oferecer</h2>
+      <p className="text-[30px]">EcoDiet é um software de nutrição para melhorar seus atendimentos e pesquisas da área. O que o EcoDiet oferece:</p>
       <ul>
-  <li style={{ display: "flex", alignItems: "center" }}>
-    <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
-    <span>Gerenciamento de atendimentos e acompanhamentos</span>
-  </li>
-  <li style={{ display: "flex", alignItems: "center" }}>
-    <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
-    <span>Histórico de evolução do paciente</span>
-  </li>
-  <li style={{ display: "flex", alignItems: "center" }}>
-    <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
-    <span>Chat integrado</span>
-  </li>
-  <li style={{ display: "flex", alignItems: "center" }}>
-    <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
-    <span>Cadastro de alimentos e alimentos por tabelas</span>
-  </li>
-  <li style={{ display: "flex", alignItems: "center" }}>
-    <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
-    <span>Registro de recordatório, prescrições, bioimpedância e exames</span>
-  </li>
-</ul>
+      <li style={{ display: "flex", alignItems: "center" }}>
+        <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+        <span className="text-[20px]">Gerenciamento de atendimentos e acompanhamentos</span>
+      </li>
+      <li style={{ display: "flex", alignItems: "center" }}>
+        <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+        <span className="text-[20px]">Histórico de evolução do paciente</span>
+      </li>
+      <li style={{ display: "flex", alignItems: "center" }}>
+        <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+        <span className="text-[20px]">Cadastro de alimentos</span>
+      </li>
+      <li style={{ display: "flex", alignItems: "center" }}>
+        <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+        <span className="text-[20px]">Suporte às tabelas TACO e IBGE</span>
+      </li>
+      <li style={{ display: "flex", alignItems: "center" }}>
+        <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+        <span className="text-[20px]">Criação de preparações</span>
+      </li>
+      <li style={{ display: "flex", alignItems: "center" }}>
+        <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+        <span className="text-[20px]">Registro de recordatório, prescrições, bioimpedância e exames</span>
+      </li>
+    </ul>
 
     </div>
   </div>
@@ -163,12 +167,31 @@ export default function Home() {
       <div style={{ marginTop: "" }}>
         <div
           style={{
-            position: "relative",
+            display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100vh",
             backgroundColor: "#BEEBC2",
             height: "100vh",
           }}
         >
-          {/* Conteúdo da terceira página */}
+    {/* Texto */}
+    <div className="text-[#2c7b35] poppins-semibold" style={{ flex: 1, padding: "0 20px" }}>
+      <h2 className="text-[60px]">Criação de projetos de pesquisa</h2>
+      <p className="text-[30px]">Um diferencial de mercado é o nosso módulo de pesquisa, que possibilita a criação de projetos utizando filtros 
+      para que o processo demorado de levantamento dos dados seja evitado. Após o projeto ser criado já é possível ver 
+      automaticamente os dados no Dashboard.</p>
+
+    
+
+    </div>
+    {/* Imagem */}
+    <div style={{ flex: 1, padding: "0 20px" }}>
+  <video autoPlay loop muted>
+    <source src="img/Projeto.mp4" type="video/mp4" />
+    Seu navegador não suporta a tag de vídeo.
+  </video>
+</div>
         </div>
       </div>
       {/* Fim da Página 3 */}
@@ -177,12 +200,44 @@ export default function Home() {
       <div style={{ marginTop: "" }}>
         <div
           style={{
-            position: "relative",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100vh",
             backgroundColor: "white",
             height: "100vh",
           }}
         >
-          {/* Conteúdo da quarta página */}
+          {/* Imagem */}
+    <div style={{ flex: 1, padding: "0 20px" }}>
+  <video autoPlay loop muted>
+    <source src="img/Paciente.mp4" type="video/mp4" />
+    Seu navegador não suporta a tag de vídeo.
+  </video>
+</div>
+
+          {/* Texto */}
+    <div className="text-black poppins-semibold" style={{ flex: 1, padding: "0 20px" }}>
+      <h2 className="text-[60px]">Fidelização do paciente</h2>
+      <p className="text-[30px]">O EcoDiet é uma ferramenta que não apenas simplifica a vida dos pacientes, mas também os fideliza por meio de suas funcionalidades intuitivas e eficazes. Algumas delas incluem:</p>
+      <ul>
+      <li style={{ display: "flex", alignItems: "center" }}>
+        <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+        <span className="text-[20px]">Acesso à todas prescrições</span>
+      </li>
+      <li style={{ display: "flex", alignItems: "center" }}>
+        <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+        <span className="text-[20px]">Histórico de evolução contínua.</span>
+      </li>
+      <li style={{ display: "flex", alignItems: "center" }}>
+        <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+        <span className="text-[20px]">Chat integrado para dúvidas com o nutricionista</span>
+      </li>
+    </ul>
+
+    
+
+    </div>
         </div>
       </div>
       {/* Fim da Página 4 */}
@@ -201,7 +256,7 @@ export default function Home() {
     }}
   >
     {/* Conteúdo da quinta página */}
-    <p style={{ fontFamily: "Poppins Semibold", fontSize: "50px", marginBottom: "20px" }}>Confira o nosso Pitch</p>
+    <p className="text-[#2c7b35]" style={{ fontFamily: "Poppins Semibold", fontSize: "50px", marginBottom: "20px" }}>Confira o nosso Pitch</p>
     <iframe
       width="70%"
       height="70%"
