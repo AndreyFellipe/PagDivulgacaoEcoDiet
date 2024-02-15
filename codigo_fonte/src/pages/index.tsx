@@ -168,9 +168,8 @@ export default function Home() {
         <div
           style={{
             display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      height: "100vh",
+            justifyContent: "center",
+            alignItems: "center",
             backgroundColor: "#BEEBC2",
             height: "100vh",
           }}
@@ -203,7 +202,6 @@ export default function Home() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            height: "100vh",
             backgroundColor: "white",
             height: "100vh",
           }}
@@ -262,9 +260,9 @@ export default function Home() {
       height="70%"
       src="https://www.youtube.com/embed/FC6kzHebnJs?vq=hd1080"
       title="YouTube video player"
-      frameborder="0"
+      frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
+      allowFullScreen
     ></iframe>
   </div>
 </div>
