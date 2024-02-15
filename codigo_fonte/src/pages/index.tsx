@@ -4,60 +4,90 @@ import alimentos from "img/alimentos.svg";
 import wave from "img/wave.svg";
 import checkIcon from "img/check.svg";
 import dcomp from "img/dcomp_ufs.png";
+import { useState } from "react";
+import Link from 'next/link';
 
 
 export default function Home() {
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
       <title>EcoDiet</title>
-      <nav className="fixed top-0 left-0 w-full h-20 bg-[#BEEBC2] z-50">
-        <div className="max-w-6xl mx-auto h-full flex items-center justify-between px-4">
+      <nav className="bg-[#BEEBC2]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Image src={logoSvg} alt="abacate" className="mr-2" />
-            <p>
-              <span
-                style={{
-                  color: "#3DAA49",
-                  fontFamily: "Poppins Semibold",
-                  fontSize: "30px",
-                }}
-              >
-                Eco
-              </span>
-              <span
-                style={{
-                  color: "black",
-                  fontFamily: "Poppins Regular",
-                  fontSize: "30px",
-                }}
-              >
-                Diet
-              </span>
-            </p>
+          <div className="flex items-center">
+          <Link href="/">
+            <div className="flex items-center">
+              <div className="flex-shrink-0">
+                <Image src={logoSvg} alt="Abacate" className="block h-8 w-auto" />
+              </div>
+              <p className="ml-2 text-green-600 font-semibold text-lg md:text-xl lg:text-2xl">
+                <span>Eco</span>
+                <span className="text-white">Diet</span>
+              </p>
+            </div>
+          </Link>
+</div>
+
+            <div className="hidden lg:block">
+              <div className="flex space-x-2">
+              <Link href="/equipe">
+                <p className="text-green-600  hover:text-white pl-2 text-lg font-medium">Equipe</p>
+                </Link>
+                <Link href="https://app-ecodiet.vercel.app/">
+                <p className="text-green-600  hover:text-white pl-2 text-lg font-medium">Conheça Nosso Site</p>
+                </Link>
+              </div>
+            </div>
           </div>
-          <span>Equipe</span>
+          <div className="hidden lg:block">
+            <div className="ml-4 flex items-center md:ml-6">
+            </div>
+          </div>
+          <div className="-mr-2 flex lg:hidden">
+            <button onClick={() => setIsOpen(!isOpen)} type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+              <span className="sr-only">main menu</span>
+              {!isOpen ? (
+                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              ) : (
+                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
-      </nav>
+      </div>
+
+      {isOpen && (
+        <div className="lg:hidden" id="mobile-menu">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <Link href="/equipe">
+          <p className="text-green-600  hover:text-white block pl-2 text-base font-medium">Equipe</p>
+          </Link>
+          <Link href="https://app-ecodiet.vercel.app/">
+            <p className="text-green-600  hover:text-white block pl-2 text-base font-medium">Conheça Nosso Site</p>
+            </Link>
+          </div>
+        </div>
+      )}
+    </nav>
 
       {/* Página 1 */}
       <div
         style={{
-          position: "absolute",
           left: 0,
           top: 0,
           right: 0,
           zIndex: -1,
           backgroundColor: "#BEEBC2",
-          height: "100vh",
+          height: "90vh",
         }}
       >
         <div>
@@ -68,7 +98,7 @@ export default function Home() {
             style={{
               position: "absolute",
               top: 120,
-              height: "100vh",
+              
               zIndex: 1,
             }}
           />
@@ -85,23 +115,24 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative m-auto w-full max-w-6xl">
+        <div className="relative m-auto">
           <div
-            className="absolute left-0 top-0 flex h-full w-full items-center justify-center"
+            className="absolute flex h-full  items-center"
             style={{
-              height: "400px",
-              width: "700px",
-              left: "-150px",
-              top: "200px",
+              
+              width: "40vw",
+              top: "40vh",
+              left: "10vw"
             }}
           >
             <div>
-              <span
-                className="font-open-sans text-70 font-light text-black"
-                style={{ lineHeight: "80px" }}
-              >
-                EcoDiet: Nutrição Inteligente para um Futuro Saudável!
-              </span>
+            <span
+  className="font-open-sans text-lg md:text-2xl lg:text-5xl font-light text-black"
+  style={{ lineHeight: "1.5" }}
+>
+  EcoDiet: Nutrição Inteligente para um Futuro Saudável!
+</span>
+
             </div>
           </div>
         </div>
@@ -109,7 +140,7 @@ export default function Home() {
       {/* Fim da Página 1 */}
 
       {/* Começo da Página 2 */}
-      <div style={{ marginTop: "100vh" }}>
+      <div style={{ }}>
   <div
     style={{
       display: "flex",
@@ -119,19 +150,21 @@ export default function Home() {
       backgroundColor: "white",
     }}
   >
-    {/* Imagem */}
-    <div style={{ flex: 1, padding: "0 20px" }}>
-  <video autoPlay loop muted>
-    <source src="img/atendimento.mp4" type="video/mp4" />
-    Seu navegador não suporta a tag de vídeo.
-  </video>
-</div>
-    
-    {/* Texto */}
-    <div className="text-black poppins-semibold" style={{ flex: 1, padding: "0 20px" }}>
-      <h2 className="text-[60px]">O que o EcoDiet tem a oferecer</h2>
-      <p className="text-[30px]">EcoDiet é um software de nutrição para melhorar seus atendimentos e pesquisas da área. O que o EcoDiet oferece:</p>
-      <ul>
+    <div className="flex justify-between items-center">
+  {/* Imagem */}
+  <div style={{ padding: "0 20px" }}>
+    <video autoPlay loop muted>
+      <source src="img/atendimento.mp4" type="video/mp4" />
+      Seu navegador não suporta a tag de vídeo.
+    </video>
+  </div>
+
+  {/* Texto */}
+  <div className="text-black poppins-semibold" style={{ padding: "0 20px" }}>
+    <h2 className="text-lg md:text-2xl lg:text-5xl">O que o EcoDiet tem a oferecer</h2>
+    <p className="text-[30px]">EcoDiet é um software de nutrição para melhorar seus atendimentos e pesquisas da área. O que o EcoDiet oferece:</p>
+
+    <ul>
       <li style={{ display: "flex", alignItems: "center" }}>
         <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
         <span className="text-[20px]">Gerenciamento de atendimentos e acompanhamentos</span>
@@ -157,6 +190,8 @@ export default function Home() {
         <span className="text-[20px]">Registro de recordatório, prescrições, bioimpedância e exames</span>
       </li>
     </ul>
+  </div>
+
 
     </div>
   </div>
