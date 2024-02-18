@@ -96,7 +96,7 @@ export default function Home() {
         >
           <div className="flex flex-col items-center justify-center">
   {/* Grupo 1 */}
-  <h2 className="mb-8 text-2xl font-bold text-center md:text-4xl lg:text-5xl">Equipe de Desenvolvimento</h2>
+  <h2 className="mb-8 text-2xl font-bold text-center md:text-4xl lg:text-5xl text-[#2c7b35]">Equipe de Desenvolvimento</h2>
   <div className="flex flex-wrap justify-center mb-16">
   <Fragment>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginRight: "10px" }}>
@@ -143,7 +143,7 @@ export default function Home() {
   </div>
 
   {/* Grupo 2 */}
-  <h2 className="mb-8 text-2xl font-bold text-center md:text-4xl lg:text-5xl">Coordenação Técnica</h2>
+  <h2 className="mb-8 text-2xl font-bold text-center md:text-4xl lg:text-5xl text-[#2c7b35]">Coordenação Técnica</h2>
   <div className="flex flex-wrap justify-center mb-16">
   <Fragment>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginRight: "10px" }}>
@@ -172,7 +172,7 @@ export default function Home() {
   </div>
 
   {/* Grupo 3 */}
-  <h2 className="mb-8 text-2xl font-bold text-center md:text-4xl lg:text-5xl">Consultoria de Nutrição</h2>
+  <h2 className="mb-8 text-2xl font-bold text-center md:text-4xl lg:text-5xl text-[#2c7b35]">Consultoria de Nutrição</h2>
   <div className="flex flex-wrap justify-center mb-16">
   <Fragment>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginRight: "10px" }}>
@@ -192,13 +192,14 @@ export default function Home() {
         {/* Fim da Página 1 */}
   
         {/* Footer */}
-        <footer className="flex justify-center items-center" style={{ backgroundColor: "#5d7d60", color: "white", textAlign: "center"}}>
-          <Image
-            src={dcomp}
-            alt="dcomp"
-            className="w-auto h-full"
-          />
-        </footer>
+        <footer className="grid grid-cols-1 md:grid-cols-2 justify-items-center items-center" style={{ backgroundColor: "#5d7d60", color: "white", textAlign: "center", height: "145px" }}>
+  <span className="text-xl md:text-2xl lg:text-3xl">Contato: ecodiet@dcomp.ufs.br</span>
+  <Image
+    src={dcomp}
+    alt="dcomp"
+    className="w-48 md:w-auto h-auto"
+  />
+</footer>
       </div>
     );
 }

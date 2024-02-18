@@ -94,11 +94,11 @@ export default function Home() {
           <Image
             src={alimentos}
             alt="prato"
-            className="mr-4 w-full"
+            className="mr-4 w-full "
             style={{
               position: "absolute",
               top: 120,
-
+              height: "110vh",
               zIndex: 1,
             }}
           />
@@ -140,67 +140,57 @@ export default function Home() {
       {/* Fim da Página 1 */}
 
       {/** Começo da Página 2 */}
-      <div style={{}}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            minHeight: "100vh",
-            backgroundColor: "white",
-          }}
-        >
-          <div className="flex flex-col md:flex-row items-center">
-            {/** Vídeo */}
-            <div style={{ padding: "20px" }}>
-              <video autoPlay loop muted>
-                <source src="img/atendimento.mp4" type="video/mp4" />
-                Seu navegador não suporta a tag de vídeo.
-              </video>
-            </div>
+      <div style={{ display: "flex", justifyContent: "space-between", minHeight: "100vh", backgroundColor: "white" }}>
+  <div className="flex flex-col md:flex-row items-center">
+    {/** Vídeo */}
+    <div className="flex-1 md:flex md:items-center">
+    <div style={{ padding: "20px" }}>
+      <video autoPlay loop muted>
+        <source src="img/atendimento.mp4" type="video/mp4" />
+        Seu navegador não suporta a tag de vídeo.
+      </video>
+    </div>
+    </div>
 
-            {/** Texto */}
-            <div
-              className="text-black poppins-semibold text-center md:text-left"
-              style={{ padding: "20px" }}
-            >
-              <h2 className="text-[50px]">
-                O que o EcoDiet tem a oferecer
-              </h2>
-              <p className="text-[30px]">
-                EcoDiet é um software de nutrição para melhorar seus atendimentos e pesquisas da área. O que o EcoDiet oferece:
-              </p>
+    {/** Texto */}
+    <div className="flex-1 md:flex md:items-center">
+    <div className="text-black poppins-semibold text-center md:text-left" style={{ padding: "20px" }}>
+      <h2 className="text-[50px]">O que o EcoDiet tem a oferecer</h2>
+      <p className="text-[30px]">
+        EcoDiet é um software de nutrição para melhorar seus atendimentos e pesquisas da área. O que o EcoDiet oferece:
+      </p>
 
-              <ul>
-                <li style={{ display: "flex", alignItems: "center" }}>
-                  <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
-                  <span className="text-[20px]">Gerenciamento de atendimentos e acompanhamentos</span>
-                </li>
-                <li style={{ display: "flex", alignItems: "center" }}>
-                  <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
-                  <span className="text-[20px]">Histórico de evolução do paciente</span>
-                </li>
-                <li style={{ display: "flex", alignItems: "center" }}>
-                  <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
-                  <span className="text-[20px]">Cadastro de alimentos</span>
-                </li>
-                <li style={{ display: "flex", alignItems: "center" }}>
-                  <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
-                  <span className="text-[20px]">Suporte às tabelas TACO e IBGE</span>
-                </li>
-                <li style={{ display: "flex", alignItems: "center" }}>
-                  <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
-                  <span className="text-[20px]">Criação de preparações</span>
-                </li>
-                <li style={{ display: "flex", alignItems: "center" }}>
-                  <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
-                  <span className="text-[20px]">Registro de recordatório, prescrições, bioimpedância e exames</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <ul>
+        <li style={{ display: "flex", alignItems: "center" }}>
+          <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+          <span className="text-[20px]">Gerenciamento de atendimentos e acompanhamentos</span>
+        </li>
+        <li style={{ display: "flex", alignItems: "center" }}>
+          <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+          <span className="text-[20px]">Histórico de evolução do paciente</span>
+        </li>
+        <li style={{ display: "flex", alignItems: "center" }}>
+          <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+          <span className="text-[20px]">Cadastro de alimentos</span>
+        </li>
+        <li style={{ display: "flex", alignItems: "center" }}>
+          <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+          <span className="text-[20px]">Suporte às tabelas TACO e IBGE</span>
+        </li>
+        <li style={{ display: "flex", alignItems: "center" }}>
+          <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+          <span className="text-[20px]">Criação de preparações</span>
+        </li>
+        <li style={{ display: "flex", alignItems: "center" }}>
+          <Image src={checkIcon} alt="Check" style={{ marginRight: "10px" }} />
+          <span className="text-[20px]">Registro de recordatório, prescrições, bioimpedância e exames</span>
+        </li>
+      </ul>
       </div>
+    </div>
+  </div>
+</div>
+
       {/** Fim da Página 2 */}
 
 
@@ -216,27 +206,28 @@ export default function Home() {
           }}
         >
           <div className="flex flex-col md:flex-row items-center">
-            {/** Texto */}
-            <div
-              className="text-[#2c7b35] poppins-semibold text-center md:text-left"
-              style={{ padding: "20px" }}
-            >
-              <h2 className="text-[60px]">Criação de projetos de pesquisa</h2>
-              <p className="text-[30px]">
-                Um diferencial de mercado é o nosso módulo de pesquisa, que possibilita a criação de projetos utilizando filtros
-                para que o processo demorado de levantamento dos dados seja evitado. Após o projeto ser criado já é possível ver
-                automaticamente os dados no Dashboard.
-              </p>
-            </div>
+  <div className="flex-1 md:flex md:items-center">
+    {/** Texto */}
+    <div className="text-[#2c7b35] poppins-semibold text-center md:text-left" style={{ padding: "20px" }}>
+      <h2 className="text-[60px]">Criação de projetos de pesquisa</h2>
+      <p className="text-[30px]">
+        Um diferencial de mercado é o nosso módulo de pesquisa, que possibilita a criação de projetos utilizando filtros
+        para que o processo demorado de levantamento dos dados seja evitado. Após o projeto ser criado já é possível ver
+        automaticamente os dados no Dashboard.
+      </p>
+    </div>
+  </div>
 
-            {/** Imagem */}
-            <div style={{ padding: "20px" }}>
-              <video autoPlay loop muted>
-                <source src="img/Projeto.mp4" type="video/mp4" />
-                Seu navegador não suporta a tag de vídeo.
-              </video>
-            </div>
-          </div>
+  <div className="flex-1 md:flex md:items-center">
+    {/** Imagem */}
+    <div style={{ padding: "20px" }}>
+      <video autoPlay loop muted>
+        <source src="img/Projeto.mp4" type="video/mp4" />
+        Seu navegador não suporta a tag de vídeo.
+      </video>
+    </div>
+  </div>
+</div>
         </div>
       </div>
       {/** Fim da Página 3 */}
@@ -254,7 +245,19 @@ export default function Home() {
           }}
         >
           <div className="flex flex-col md:flex-row items-center">
+
+            {/** Imagem */}
+            <div className="flex-1 md:flex md:items-center">
+            <div style={{ padding: "20px" }}>
+              <video autoPlay loop muted>
+                <source src="img/Paciente.mp4" type="video/mp4" />
+                Seu navegador não suporta a tag de vídeo.
+              </video>
+            </div>
+            </div>
+
             {/** Texto */}
+            <div className="flex-1 md:flex md:items-center">
             <div
               className="text-black poppins-semibold text-center md:text-left"
               style={{ padding: "20px" }}
@@ -278,13 +281,6 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-
-            {/** Imagem */}
-            <div style={{ padding: "20px" }}>
-              <video autoPlay loop muted>
-                <source src="img/Paciente.mp4" type="video/mp4" />
-                Seu navegador não suporta a tag de vídeo.
-              </video>
             </div>
           </div>
         </div>
@@ -306,7 +302,7 @@ export default function Home() {
           }}
         >
           {/* Conteúdo da quinta página */}
-          <p className="text-[#2c7b35]" style={{ fontFamily: "Poppins Semibold", fontSize: "50px", marginBottom: "20px" }}>Confira o nosso Pitch</p>
+          <p className="text-[#2c7b35] text-center" style={{ fontFamily: "Poppins Semibold", fontSize: "50px", marginBottom: "20px" }}>Confira o nosso Pitch</p>
           <iframe
             width="70%"
             height="70%"
@@ -321,13 +317,15 @@ export default function Home() {
       {/* Fim da Página 5 */}
 
       {/* Footer */}
-      <footer className="flex justify-center items-center" style={{ backgroundColor: "#5d7d60", color: "white", textAlign: "center", height: "100px" }}>
-        <Image
-          src={dcomp}
-          alt="dcomp"
-          className="w-auto h-full"
-        />
-      </footer>
+      <footer className="grid grid-cols-1 md:grid-cols-2 justify-items-center items-center" style={{ backgroundColor: "#5d7d60", color: "white", textAlign: "center", height: "145px" }}>
+  <span className="text-xl md:text-2xl lg:text-3xl">Contato: ecodiet@dcomp.ufs.br</span>
+  <Image
+    src={dcomp}
+    alt="dcomp"
+    className="w-48 md:w-auto h-auto"
+  />
+</footer>
+
       
     </div>
     
