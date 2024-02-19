@@ -306,7 +306,7 @@ export default function Home() {
           <iframe
             width="70%"
             height="70%"
-            src="https://www.youtube.com/embed/FC6kzHebnJs?vq=hd1080"
+            src="https://www.youtube.com/embed/Q05-eG66gEs?vq=hd1080"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
