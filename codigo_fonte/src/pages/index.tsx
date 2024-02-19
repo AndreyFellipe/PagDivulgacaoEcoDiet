@@ -317,14 +317,14 @@ export default function Home() {
       {/* Fim da Página 5 */}
 
       {/* Footer */}
-      <footer className="grid grid-cols-1 md:grid-cols-2 justify-items-center items-center" style={{ backgroundColor: "#5d7d60", color: "white", textAlign: "center", height: "145px" }}>
-  <span className="text-xl md:text-2xl lg:text-3xl">Contato: ecodiet@dcomp.ufs.br</span>
-  <Image
-    src={dcomp}
-    alt="dcomp"
-    className="w-24 md:w-auto h-auto"
-  />
-</footer>
+      <footer className="grid grid-cols-1 md:grid-cols-2 justify-items-center items-center" style={{ backgroundColor: "#5d7d60", color: "white", textAlign: "center", height: "155px" }}>
+      <span className="text-xl md:text-2xl lg:text-3xl">Contato: ecodiet@dcomp.ufs.br</span>
+      <Image
+        src={dcomp}
+        alt="dcomp"
+        className="w-[440px] "
+      />
+      </footer>
 
       
     </div>
