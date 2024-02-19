@@ -322,7 +322,7 @@ export default function Home() {
   <Image
     src={dcomp}
     alt="dcomp"
-    className="w-48 md:w-auto h-auto"
+    className="w-24 md:w-auto h-auto"
   />
 </footer>
 
